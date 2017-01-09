@@ -40,7 +40,7 @@ const (
 var DoitCmd = &Command{
 	Command: &cobra.Command{
 		Use:   "doctl",
-		Short: "doctl is a command line interface for the DigitalOcean API.",
+		Short: "jconard3-doctl is a command line interface for the DigitalOcean API.",
 	},
 }
 
@@ -162,6 +162,7 @@ func computeCmd() *Command {
 	}
 
 	cmd.AddCommand(Actions())
+	cmd.AddCommand(CoreOS())
 	cmd.AddCommand(DropletAction())
 	cmd.AddCommand(Droplet())
 	cmd.AddCommand(Domain())
